@@ -44,18 +44,14 @@ Load Order from Scratch:
 
 		2. Open the sentiment_machine_learning jupyter file, and explore the results of your
 
-Important variables:
-	1. client.delay_range[n, x]: found in instabot.py, instagramcomments.py, & instagramfollowers.py, this variable sets a random delay between n & x seconds between api calls; this is to mimic actually browsing instagram and being respectful to their api.
-	2. user_ids: found in instabot.py, this variable is contains a list of account id's which we used to build our dataset. To build a larger or smaller dataset, just add or remove accounts in the same format: client.user_id_from_username(username) 
+	csv/txt file descriptions:
 
-csv/txt file descriptions:
+		1. credentials.txt: contains username, password, and session_id of an instagram account
 
-	1. credentials.txt: contains username, password, and session_id of an instagram account
+		2. instagram_data.csv: a csv containing the post data of certain users' last 20 posts. data saved includes: media_id, media_type, # of followers, # of comments, # of likes.
 
-	2. instagram_data.csv: a csv containing the post data of certain users' last 20 posts. data saved includes: media_id, media_type, # of followers, # of comments, # of likes.
+		3. comments.csv: a csv containing  the last 50 comments for the posts mentioned in instagram_data.csv
 
-	3. comments.csv: a csv containing  the last 50 comments for the posts mentioned in instagram_data.csv
+		4. comments_cleaned.csv: a csv which contains the comments of comments.csv, but with the comment tokenized, stopwords removed, and emojis removed.
 
-	4. comments_cleaned.csv: a csv which contains the comments of comments.csv, but with the comment tokenized, stopwords removed, and emojis removed.
-
-	5. final_data.csv: a csv with all the data in instagram_data.csv, but includes the average sentiment analysis score for a posts set of comments.
+		5. final_data.csv: a csv with all the data in instagram_data.csv, but includes the average sentiment analysis score for a posts set of comments.
